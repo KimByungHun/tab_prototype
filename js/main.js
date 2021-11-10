@@ -6,8 +6,11 @@ function Tab(){
     this.$btn.on("click", function(e){
         e.preventDefault();
         this.activation(this);
-    });
+    }.bind(this));
 }
+
+
+
 
 // 탭 활성화 함수 정의
 function activation(el){
