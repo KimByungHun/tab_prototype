@@ -1,5 +1,6 @@
-function Tab(){
-    this.$tab = $("#tab");
+
+function Tab(selector){
+    this.$tab = $(selector);
     this.$btn = this.$tab.find("ul li");
     this.$box = this.$tab.children("div");
 
@@ -12,9 +13,9 @@ function Tab(){
 Tab.prototype.activation = function activation(el){
     var target = $(el).children("a").attr("href");
 
-    $btn.removeClass("on");
+    this.$btn.removeClass("on");
     $(el).addClass("on");
 
-    $box.hide();
+    this.$box.hide();
     $(target).show();
 }
