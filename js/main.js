@@ -9,11 +9,7 @@ function Tab(){
     }.bind(this));
 }
 
-
-
-
-// 탭 활성화 함수 정의
-function activation(el){
+Tab.prototype.activation = function activation(el){
     var target = $(el).children("a").attr("href");
 
     $btn.removeClass("on");
