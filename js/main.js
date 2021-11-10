@@ -1,12 +1,13 @@
-var $tab = $("#tab");
-var $btn = $tab.find("ul li");
-var $box = $tab.children("div");
+function Tab(){
+    this.$tab = $("#tab");
+    this.$btn = this.$tab.find("ul li");
+    this.$box = this.$tab.children("div");
 
-$btn.on("click", function(e){
-    e.preventDefault();
-
-    activation(this);
-});
+    this.$btn.on("click", function(e){
+        e.preventDefault();
+        this.activation(this);
+    });
+}
 
 // 탭 활성화 함수 정의
 function activation(el){
