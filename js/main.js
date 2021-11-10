@@ -1,3 +1,4 @@
+new Tab("#tab");
 
 function Tab(selector){
     this.$tab = $(selector);
@@ -6,7 +7,7 @@ function Tab(selector){
 
     this.$btn.on("click", function(e){
         e.preventDefault();
-        this.activation(this);
+        this.activation(e.currentTarget);
     }.bind(this));
 }
 
